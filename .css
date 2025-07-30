@@ -1,0 +1,129 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fff0f5, #ffe4e1);
+  color: #333;
+}
+
+/* Header styling */
+header {
+  background-color: #ff69b4;
+  padding: 1.2em 1em;
+  text-align: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 0.5em;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Product grid section */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 2em;
+}
+
+/* Product cards */
+.product-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card h2 {
+  font-size: 1.2rem;
+  margin: 0.5em 0 0.2em;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Add to Cart button */
+button {
+  background-color: #ff1493;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff69b4;
+}
+
+/* Footer styling */
+footer {
+  background-color: #ffe4e1;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
