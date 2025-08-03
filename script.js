@@ -59,3 +59,58 @@ function addToCart(index) {
 }
 
 window.onload = displayProducts;
+// 1. Search box input logic
+document.querySelector(".inp input").addEventListener("keyup", function () {
+  const value = this.value.trim().toLowerCase();
+  if (value.length > 1) {
+    console.log(`User is searching for: ${value}`);
+    alert(`Search triggered: "${value}"`);
+  }
+});
+
+// 2. Wishlist icon (heart)
+document.querySelector(".fa-heart").addEventListener("click", () => {
+  alert("💖 Added to your wishlist!");
+});
+
+// 3. Smile icon click
+document.querySelector(".fa-face-smile").addEventListener("click", () => {
+  alert("😊 Thanks for visiting us!");
+});
+
+// 4. Clickable product images (category cards)
+document.querySelectorAll(".card img").forEach((img, index) => {
+  img.style.cursor = "pointer";
+  img.addEventListener("click", () => {
+    alert(`🛍️ You clicked on Category ${index + 1}`);
+  });
+});
+
+// 5. Nav hover effect with JS (alternative to CSS)
+document.querySelectorAll("nav p").forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    item.style.color = "purple";
+    item.style.fontWeight = "600";
+  });
+  item.addEventListener("mouseleave", () => {
+    item.style.color = "";
+    item.style.fontWeight = "";
+  });
+});
+
+// 6. Deal image interaction
+const dealImage = document.querySelector(".deal img");
+if (dealImage) {
+  dealImage.style.cursor = "pointer";
+  dealImage.addEventListener("click", () => {
+    alert("🎉 Deal of the day clicked!");
+  });
+}
+
+// 7. Footer click demo
+document.querySelectorAll(".footer .list p").forEach((link) => {
+  link.style.cursor = "pointer";
+  link.addEventListener("click", () => {
+    alert(`Navigating to "${link.textContent}"...`);
+  });
+});
